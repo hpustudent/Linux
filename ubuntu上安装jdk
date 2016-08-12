@@ -1,1 +1,7 @@
-#dd
+1、将需要的文件下载到本地
+
+2、ssh root@11.22.33.44 远程登录到服务器
+
+3、scp命令传送到linux即可
+ 在macbook上另开一个terminal，输入命令scp /Users/***/***/jdk-8u101-linux-x64.tar.gz root@22.33.44.55:/usr/java 
+ ok，等待上传即可
