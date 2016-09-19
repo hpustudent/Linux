@@ -5,7 +5,7 @@
 ###3、scp命令传送到linux即可
   scp命令第一个参数为源地址，第二个参数为目标主机地址
   在macbook上另开一个terminal，输入命令scp /Users/***/***/jdk-8u101-linux-x64.tar.gz root@22.33.44.55:/usr/java 
-   ok，等待上传即可
+  ok，等待上传即可
 
 ###4、tar -zxvf ***.tar.gz 解压缩文件
 
