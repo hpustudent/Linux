@@ -12,11 +12,9 @@
 
 5.    授权
 
-    `GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;`
-
-    `授权所有主机可以以root身份，123456为密码登录进mysql`
-
-    `flush privileges刷新权限即可`
+    GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
+    授权所有主机可以以root身份，123456为密码登录进mysql
+    flush privileges刷新权限即可
            
 6.  设置mysql绑定地址
     
