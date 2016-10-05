@@ -10,4 +10,5 @@
 ## jvm相关命令
 - jmap -heap +pid 查看进程堆情况
 - jmap -histo +pid 查看创建系统创建实例对象
+- jmap -histo:live +pid 触发full gc
 - jstat -gcutil +pid +interval 检测某个进程内存情况 
