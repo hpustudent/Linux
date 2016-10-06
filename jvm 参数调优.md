@@ -53,21 +53,27 @@
     - FGC：年老代次数
 
 - jstat -class
+
 ![image](/gcimg/gstat-class.png)
 
 - jstat -gc
+
 ![image](/gcimg/gstat-gc.png)
 
 - jstat -gcnew
+
 ![image](/gcimg/gstat-gcnew.png)
 
 - jstat - gcold
+
 ![image](/gcimg/gstat-gcold.png)
 
 - jstat -gcoldcapacity
+
 ![image](/gcimg/gstat-gcoldcapacity.png)
 
 - jstat -gcnewcapacity
-![image](/gcimg/gstat-gcnewcapacity.png)
+
+![image](/gcimg/jstat-gcnewcapacity.png)
 
 [jstat命令使用和含义](http://blog.csdn.net/maosijunzi/article/details/46049117)
