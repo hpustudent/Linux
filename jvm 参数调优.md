@@ -12,6 +12,8 @@
 - jmap -histo +pid 查看创建系统创建实例对象
 - jmap -histo:live +pid 触发full gc 统计出活对象
 - jstat -gcutil +pid +interval 检测某个进程内存情况 
+- jstat -gc +pid +interval 
+- jstat -gccapacity +pid 堆内存统计
 
 - 堆内存=年轻+年老+永久
 - 年轻= eden+2*survivor
@@ -20,7 +22,25 @@
     - S0C S1C S0U S1U :survivor 0/1区 Capacity和Usage
     - EC EU: eden区Capacity和Usage
     - OC OU:年老代Capacity和Usage
+    - MC MU:方法去Capacity和Usage
+    - CCSC CCSU:压缩类Capacity和Usage
     - PC PU:永久带Capacity和Usage
     - YGC YGT：年轻代GC次数和GC耗时
     - FGC FGCT：full gc次数和耗时
     - GCT：GC总耗时
+- jstat -gccapacity打印值含义
+    - NGCMN:新生代最小容量
+    - NGCMX:新生代最大容量
+    - NGC：当前新生代容量
+    - OGCMN:老年代最小容量
+    - OGCMX：老年代最大容量
+    - OGC：当前老年代大小
+    - OC:当前老年代大小
+    - MCMN：最小元数据容量
+    - MCMX：最大元数据容量
+    - MC:当前元数据空间大小
+    - CCSMN：最小压缩类空间大小
+    - CCSMX：最大压缩类空间
+    - CCSC:当前压缩类空间大小
+    - YGC：年轻代gc次数
+    - FGC：年老代次数
