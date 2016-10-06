@@ -14,6 +14,9 @@
 - jstat -gcutil +pid +interval 检测某个进程内存情况 
 - jstat -gc +pid +interval 
 - jstat -gccapacity +pid 堆内存统计
+- jstat -gcnew +pid 新生代垃圾回收统计
+- jstat -gcnewcapacity +pid 新生代内存统计
+
 
 - 堆内存=年轻+年老+永久
 - 年轻= eden+2*survivor
