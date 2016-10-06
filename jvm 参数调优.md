@@ -49,3 +49,5 @@
     - CCSC:当前压缩类空间大小
     - YGC：年轻代gc次数
     - FGC：年老代次数
+
+[jstat命令使用和含义](http://blog.csdn.net/maosijunzi/article/details/46049117)
