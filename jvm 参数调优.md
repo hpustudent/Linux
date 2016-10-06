@@ -12,3 +12,15 @@
 - jmap -histo +pid 查看创建系统创建实例对象
 - jmap -histo:live +pid 触发full gc 统计出活对象
 - jstat -gcutil +pid +interval 检测某个进程内存情况 
+
+- 堆内存=年轻+年老+永久
+- 年轻= eden+2*survivor
+
+    jstat -gcutil打印出值的含义
+    S0C S1C S0U S1U :survivor 0/1区 Capacity和Usage
+    EC EU: eden区Capacity和Usage
+    OC OU:年老代Capacity和Usage
+    PC PU:永久带Capacity和Usage
+    YGC YGT：年轻代GC次数和GC耗时
+    FGC FGCT：full gc次数和耗时
+    GCT：GC总耗时
