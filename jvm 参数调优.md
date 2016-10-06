@@ -28,7 +28,9 @@
     - YGC YGT：年轻代GC次数和GC耗时
     - FGC FGCT：full gc次数和耗时
     - GCT：GC总耗时
+    
 - jstat -gccapacity打印值含义
+
     - NGCMN:新生代最小容量
     - NGCMX:新生代最大容量
     - NGC：当前新生代容量
