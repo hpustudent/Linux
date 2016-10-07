@@ -1,4 +1,12 @@
-## java -XX:+PrintCommandLineFlags -version 查看jvm初始配置和版本信息
+## java -XX:+PrintCommandLineFlags -version 查看jvm初始配置和版本信息, java -XX:+PrintFlagsFinal -version 查看jvm相关flags  
+    例如使用java -XX:+PrintFlagsFinal -version |grep manageable查看jvm管理相关flag的接口，打印
+    bool PrintGC                                   = false                               {manageable}
+    bool PrintGCDateStamps                         = false                               {manageable}
+    bool PrintGCDetails                            = false                               {manageable}
+    
+    可以通过下边介绍的 jinfo -flag +PrintGCTimeStamps 26773 和jinfo -flag +PrintGC 26773 打开日志简略信息
+    jinfo -flag -PrintGCTimeStamps 26773 和jinfo -flag -PrintGC 26773关闭日志信息
+
 
 ## -XX:+PrintGC，等同于-verbose:gc 表示打开简化的GC日志
 
