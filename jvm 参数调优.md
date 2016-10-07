@@ -1,7 +1,9 @@
 ## java -XX:+PrintCommandLineFlags -version 查看jvm初始配置和版本信息
 
+## -XX:+PrintGC，等同于-verbose:gc 表示打开简化的GC日志
+
 ## jinfo命令
-- jinfo主要用于输出系统参数和命令行参数,例如输入 `jinfo -flags 26773`
+- jinfo主要用于输出或者设置系统参数和命令行参数,例如输入 `jinfo -flags 26773`
 
   >Attaching to process ID 26773, please wait...  
   >Debugger attached successfully.  
@@ -11,7 +13,7 @@
   >XX:MinHeapDeltaBytes=524288 -XX:NewSize=2147483648 -XX:OldSize=1073741824 -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -  
   >XX:+UseParallelGC   
   >Command line:  -Xms3g -Xmx3g -Xmn2g  
-
+- 
 
 ## -Xms2g -Xmx2g -Xmn256m -XX:SurvivorRatio=8 -XX:ParallelGCThreads=8 -XX:PermSize=512m -XX:MaxPermSize=512m -Xss256k -XX:-DisableExplicitGC -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled
 -  -Xms:初始堆大小， 默认为物理内存的1/64
