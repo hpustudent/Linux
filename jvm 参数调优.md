@@ -1,3 +1,5 @@
+## java -XX:+PrintCommandLineFlags -version 查看jvm初始配置和版本信息
+
 ## -Xms2g -Xmx2g -Xmn256m -XX:SurvivorRatio=8 -XX:ParallelGCThreads=8 -XX:PermSize=512m -XX:MaxPermSize=512m -Xss256k -XX:-DisableExplicitGC -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled
 -  -Xms:初始堆大小， 默认为物理内存的1/64
 -  -Xmx:最大堆大小
