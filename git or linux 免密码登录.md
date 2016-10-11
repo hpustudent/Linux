@@ -25,3 +25,6 @@ IdentityFile 公钥位置
 IdentityFile 私钥位置
 
 ok可以登录了
+
+## 利用ssh-copy-id 命令
+
