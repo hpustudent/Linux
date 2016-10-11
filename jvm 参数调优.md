@@ -31,6 +31,7 @@
 -  -XX:PermSize,永久代的大小，默认是物理内存的1/64
 -  -XX:MaxPermSize,永久带最大值，默认是物理内存的1/4
 -  -Xss:每个线程的堆栈大小
+-  -XX:ParallelGCThreads 并行收集器线程数 此处配置为8 ，与cpu核心数相等最好
 
 ## jvm相关命令
 - jmap -heap +pid 查看进程堆情况
