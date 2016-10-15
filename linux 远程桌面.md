@@ -2,7 +2,7 @@
 - 安装好之后，修改密码, `cd .vnc` 然后删除下边的 passwd文件
 - 运行vncserver ,使用`netstat -tp `命令可以查看xvnc4的监听端口
 
--打开[chicken of vnc](http://ncu.dl.sourceforge.net/project/cotvnc/cotvnc/Chicken%20of%20the%20VNC%202.0b4/cotvnc-20b4.dmg) 输入密码和host即可登录
+- 打开[chicken of vnc](http://ncu.dl.sourceforge.net/project/cotvnc/cotvnc/Chicken%20of%20the%20VNC%202.0b4/cotvnc-20b4.dmg) 输入密码和host即可登录
 
 
 ## 通用脚本
