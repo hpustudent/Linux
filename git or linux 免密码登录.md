@@ -17,14 +17,14 @@ The key fingerprint is:
 
 (4)好了再自己电脑上ssh命令登录就不用输入密钥了
 
-注意：系统默认寻找私钥是在~/.ssh/id_rsa这个文件，如果是要配置多个服务器免密码登录，要这么做
-（1）在客户端~/.ssh目录下创建config文件
-（2）在config文件中输入
-Host .....
-IdentityFile 公钥位置
-IdentityFile 私钥位置
+注意：系统默认寻找私钥是在~/.ssh/id_rsa这个文件，如果是要配置多个服务器免密码登录，要这么做  
+（1）在客户端~/.ssh目录下创建config文件  
+（2）在config文件中输入  
+Host .....  
+IdentityFile 公钥位置  
+IdentityFile 私钥位置  
 
-ok可以登录了
+ok可以登录了  
 
 ## 利用ssh-copy-id 命令
 
