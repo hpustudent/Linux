@@ -1,9 +1,9 @@
 1. 生成rsa密钥对
-            ssh-keygen -t rsa
+        ssh-keygen -t rsa
 
-            这一步会提示让输入密码，这里不要输入，因为本来就是要免密码登录的
-            指定密钥要保存的文件 ，会生成指纹
-            The key fingerprint is:
+        这一步会提示让输入密码，这里不要输入，因为本来就是要免密码登录的
+        指定密钥要保存的文件 ，会生成指纹
+        The key fingerprint is:
   
 
 2. 进入指纹生成文件的目录，可以看到指定的文件例如id_rsa,同时生成了一个公钥id_rsa_pub
