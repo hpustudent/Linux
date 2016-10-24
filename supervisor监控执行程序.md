@@ -33,8 +33,8 @@
 3. 添加程序可以在supervisord.conf文件中添加，也可以在conf.d/文件夹下添加.conf文件  
       [program:test]  
       command = python /home/test.py  
-      autostart = true 
-      user = root  
+      autostart = true   
+      user = root    
 
 4. 启动supervisor服务， `sudo service supervisor start`
 
