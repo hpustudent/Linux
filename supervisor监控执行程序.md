@@ -48,3 +48,5 @@
 7. 启动 `sudo supervisorctl start test`，停止 `sudo supervisorctl stop test`
 
 8. `chkconfig |grep supervisor ` 查看supervisor是否被设置为开机启动，如果没有使用 `chkconfig supervisor on` 打开开机启动。
+
+9. `supervisorctl status`查看所有监护的进程
