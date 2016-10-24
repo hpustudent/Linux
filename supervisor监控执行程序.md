@@ -32,7 +32,7 @@
 
 3. 添加程序可以在supervisord.conf文件中添加，也可以在conf.d/文件夹下添加.conf文件  
       [program:test]  
-      directory = /usr*****  //表示test所在的工作目录
+      directory = /usr*****  //表示test所在的工作目录  
       command = python /home/test.py  
       priority = 1 //优先级按照优先级从高到低依次启动，数字越大，越先启动  
       autostart = true   //程序是否随着supervisor的启动而启动  
