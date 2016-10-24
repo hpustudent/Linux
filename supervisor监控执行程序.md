@@ -32,12 +32,15 @@
 
 3. 添加程序可以在supervisord.conf文件中添加，也可以在conf.d/文件夹下添加.conf文件  
       [program:test]  
+      directory = /usr*****  //表示test所在的工作目录
       command = python /home/test.py  
-      autostart = true   
+      priority = 1 //优先级按照优先级从高到低依次启动，数字越大，越先启动
+      autostart = true   //程序是否随着supervisor的启动而启动
+      autorestart = true // 程序停止时是否自动重启
       user = root    
 
 4. 启动supervisor服务， `sudo service supervisor start`
 
-5. 重启或者更新配置，`sudo supervisorctl update`
+5. 重启或者更新配置，`sudo supervisorctl update` （/etc/supervisord.conf.d/目录下添加新的配置文件后，使用update命令，会把新服务启动，而且不会影响原来的服务）
 
 6. 启动 `sudo supervisorctl start test`，停止 `sudo supervisorctl stop test`
