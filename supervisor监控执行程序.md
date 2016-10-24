@@ -46,3 +46,5 @@
 6. 重启配置，`sudo supervisorctl reload`，重新按照conf文件启动supervisor服务，所有服务都会重新启动。修改supervisord.conf文件内容，比如添加web访问，必须使用reload重新加载配置和重启supervisor服务才可以生效。
 
 7. 启动 `sudo supervisorctl start test`，停止 `sudo supervisorctl stop test`
+
+8. `chkconfig |grep supervisor ` 查看supervisor是否被设置为开机启动，如果没有使用 `chkconfig supervisor on` 打开开机启动。
