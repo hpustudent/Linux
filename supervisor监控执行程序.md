@@ -41,6 +41,7 @@
 
 4. 启动supervisor服务， `sudo service supervisor start`
 
-5. 重启或者更新配置，`sudo supervisorctl update` （/etc/supervisord.conf.d/目录下添加新的配置文件后，使用update命令，会把新服务启动，而且不会影响原来的服务）
+5. 更新配置，`sudo supervisorctl update` （/etc/supervisord.conf.d/目录下添加新的配置文件后，使用update命令，会把新服务启动，而且不会影响原来的服务）
+6. 重启配置，`sudo supervisorctl reload`，重新按照conf文件启动supervisor服务，所有服务都会重新启动。
 
-6. 启动 `sudo supervisorctl start test`，停止 `sudo supervisorctl stop test`
+7. 启动 `sudo supervisorctl start test`，停止 `sudo supervisorctl stop test`
