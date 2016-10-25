@@ -37,8 +37,8 @@
       priority = 1 //优先级按照优先级从高到低依次启动，数字越大，越先启动  
       autostart = true   //程序是否随着supervisor的启动而启动  
       autorestart = true // 程序停止时是否自动重启  
-      stdout_logfile = /var/log/supervisord/test_server.log
-      redirect_stderr=true //重定向错误日志到标准输出上
+      stdout_logfile = /var/log/supervisord/test_server.log  
+      redirect_stderr=true //重定向错误日志到标准输出上  
       user = root    
 
 4. 启动supervisor服务， `sudo service supervisor start`
