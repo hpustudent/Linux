@@ -43,9 +43,73 @@
               6. [ -d $file ] 文件是否是目录
               7. [ -f $file ] 文件是否是普通文件
          8. 条件判断
-              1. 无条件继续执行用分号
+              1. 无条件继续执行用分号
               2. 前一个条件正确则执行下一个用&&
               3. 前一个条件不正确则执行下一个用||
-         
-         
+              4. if ... fi 语句
+                    if [ expression ]
+                    then 
+                       some statements
+                    fi
+              5. if ... else ... fi语句
+                    if [ expression ]
+                    then
+                       some statements
+                    else
+                       some statements
+                    fi
+              6. if ... elif ... else ... fi语句
+                    if [ expression ]
+                    then
+                      some statements
+                    elif [ expression ]
+                    then 
+                      some statements
+                    elif [ expression ]
+                    then
+                      some statemens
+                    else
+                      some statemens
+                    fi
+              7. test 命令替换[ expression ]检测某个条件是否成立
+              8. case语句使用，值必须为常数或者变量，;;表示break，跳出
+                    case 值 in
+                    模式1)
+                        command1
+                        ;;
+                    模式2）
+                        command2
+                        ;;
+                    *)
+                        command3
+                        ;;
+                    esac
+              9. for循环语句使用，列表是数字或者字符串组成的序列，每个值通过空格分割，也可以不加in，没有in的时候，使用命令行位置参数
+                    for 变量 in 列表
+                    do
+                        command1
+                        command2
+                        ...
+                        commandN
+                    done
+              10. while循环语句使用
+                    while command
+                    do
+                       Statement(s) to be executed if command is true
+                    done
+              11. until 循环语句使用
+                    until command
+                    do
+                       Statement(s) to be executed until command is true
+                    done
+              12. 定义函数，方式为,可以增加return语句执行返回值，如果不加，会将最后一句命令运行结果作为返回值，函数返回值可以通过$?获得，调用函数时可以向其传递参数，函数体内部，通过${n}获取参数的值
+                    func_name(){
+                      [return value]
+                    }
+                    
+              
+              
+              
+                    
+
     > 注意：shell定义变量时，变量名和=之间不能留有空格，使用定义过的变量，只要在变量名前家$或者${}，单引号字符串中的变量无效，双引号中可以有变量
