@@ -2,6 +2,7 @@
 
 1. 使用`service supervisor status`测试服务状态
 2. 在`/etc/supervisor/supervisord.conf`中配置服务
+
         ; supervisor config file
         [unix_http_server]
         file=/var/run//supervisor.sock   ; (the path to the socket file)
