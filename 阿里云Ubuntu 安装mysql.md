@@ -16,6 +16,8 @@
           授权所有主机可以以root身份，123456为密码登录进mysql
           flush privileges刷新权限即可
            
+      撤回权限：revoke all privileges on *.* from dba@localhost;     
+           
 6.  设置mysql绑定地址
     
           vim /etc/mysql/my.cnf
