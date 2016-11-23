@@ -41,6 +41,9 @@
       stdout_logfile = /var/log/supervisord/test_server.log  
       redirect_stderr=true //重定向错误日志到标准输出上  
       user = root    
+      
+      numprocs=3
+      process_name=%(program_name)s_%(process_num)02d
 
 4. 启动supervisor服务， `sudo service supervisor start`
 
