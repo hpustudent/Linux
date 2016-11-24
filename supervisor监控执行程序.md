@@ -42,9 +42,9 @@
       redirect_stderr=true //重定向错误日志到标准输出上  
       user = root    
       
-      numprocs=3  //进程数量
-      numprocs_start=1 //编号起始
-      process_name=%(program_name)s_%(process_num)02d  //进程名字
+      numprocs=3  //进程数量  
+      numprocs_start=1 //编号起始  
+      process_name=%(program_name)s_%(process_num)02d  //进程名字  
 
 4. 启动supervisor服务， `sudo service supervisor start`
 
