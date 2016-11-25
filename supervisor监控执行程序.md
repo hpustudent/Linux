@@ -58,4 +58,4 @@
 
 9. `supervisorctl status`查看所有监护的进程，如果没有则显示，is running
 
-10. `supervisorctl reread ****`读取有更新的文件，不会启动新添加的程序
+10. `supervisorctl reread`读取有更新的文件，不会启动新添加的程序
