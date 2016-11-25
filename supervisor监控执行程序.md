@@ -57,3 +57,5 @@
 8. `chkconfig |grep supervisor ` 查看supervisor是否被设置为开机启动，如果没有使用 `chkconfig supervisor on` 打开开机启动。
 
 9. `supervisorctl status`查看所有监护的进程，如果没有则显示，is running
+
+10. `supervisorctl reread ****`读取有更新的文件，不会启动新添加的程序
