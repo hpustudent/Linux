@@ -59,3 +59,6 @@
 9. `supervisorctl status`查看所有监护的进程，如果没有则显示，is running
 
 10. `supervisorctl reread`读取有更新的文件，不会启动新添加的程序
+
+11. 出现输出乱码情况，在supervisord.conf 的[supervisord] 字段下添加  
+        `environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8`
