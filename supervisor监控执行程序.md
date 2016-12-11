@@ -41,6 +41,8 @@
       stdout_logfile = /var/log/supervisord/test_server.log  
       redirect_stderr=true //重定向错误日志到标准输出上  
       user = root    
+      stdout_logfile_maxbytes=20MB  ; stdout 日志文件大小，默认50MB
+      stdout_logfile_backups = 20 
       
       numprocs=3  //进程数量  
       numprocs_start=1 //编号起始  
@@ -62,3 +64,5 @@
 
 11. 出现输出乱码情况，在supervisord.conf 的[supervisord] 字段下添加  
         `environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8`
+ 
+
