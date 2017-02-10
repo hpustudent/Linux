@@ -12,4 +12,4 @@
             "fast_open": false
         }
 ### ssserver -c /etc/config.json start 启动服务器，也可以指定-d 监控执行程序
-参考链接：[科学上网](http://wuchong.me/blog/2015/02/02/shadowsocks-install-and-optimize/)
+参考链接：[上网](http://wuchong.me/blog/2015/02/02/shadowsocks-install-and-optimize/)
