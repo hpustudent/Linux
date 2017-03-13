@@ -5,7 +5,7 @@
 ### 安装tengine, 
 
 
-    wget http://tengine.taobao.org/download/tengine-2.0.3.tar.gz
+    wget http://tengine.taobao.org/download/tengine-2.2.0.tar.gz
     chmod 755 tengine-2.0.3.tar.gz
     tar -xzvf  tengine-2.0.3.tar.gz
     cd tengine-2.0.3
