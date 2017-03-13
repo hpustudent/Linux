@@ -12,3 +12,5 @@
     make
     make install
     /alidata/server/nginx/sbin/ningx
+
+### nginx -s reload，重新载入nginx文件
