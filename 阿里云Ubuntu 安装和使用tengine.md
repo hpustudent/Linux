@@ -31,7 +31,7 @@
         
 3. 配置反向代理服务器群
    
-       upstream badunodes {
+       upstream baidunodes {
             server 127.0.0.1:8080;
        }
 
