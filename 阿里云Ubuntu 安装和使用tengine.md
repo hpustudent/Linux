@@ -18,3 +18,7 @@
 2. 如果要想测试一下编辑过的ngxin.conf文件语法是否争取，可以用nginx -t 命令进行测试
 3. 如果修改了nginx.conf文件，可以使用nginx -s reload，重新载入nginx配置文件并启动服务器
 4. 如果想要停止运行nginx,使用nginx -s stop 停止运行ngxin，-s意思为signal
+
+### 编辑配置文件
+1. 在nginx目录下，找到conf目录，找到nginx.conf打开编辑
+2. 
