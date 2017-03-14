@@ -45,3 +45,6 @@
                 proxy_set_header X-Real-IP $remote_addr;
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
+        
+        
+4. 如果某个节点down机，则需要在upstream server中的子节点后边配置，max_fails=10 fail_timeout=30s weight=4;  请求失败次数，请求超时时间，服务器权重等。
