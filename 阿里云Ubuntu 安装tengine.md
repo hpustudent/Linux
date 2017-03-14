@@ -13,4 +13,8 @@
     make install
     /alidata/server/nginx/sbin/ningx
 
-### nginx -s reload，重新载入nginx文件
+### 使用tengine
+1. 直接进入sbin目录下，使用nginx敲击回车，就会启动tengine,访问localhost就会给出提示
+2. 如果要想测试一下编辑过的ngxin.conf文件语法是否争取，可以用nginx -t 命令进行测试
+3. 如果修改了nginx.conf文件，可以使用nginx -s reload，重新载入nginx配置文件并启动服务器
+4. 如果想要停止运行nginx,使用nginx -s stop 停止运行ngxin，-s意思为signal
