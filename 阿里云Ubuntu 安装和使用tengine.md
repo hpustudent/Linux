@@ -21,4 +21,27 @@
 
 ### 编辑配置文件
 1. 在nginx目录下，找到conf目录，找到nginx.conf打开编辑
-2. 
+2. 配置禁止ip或者非法域名访问服务器
+
+        server {
+                listen 80 default;
+                server_name _;
+                return 500;
+        }
+        
+3. 配置反向代理服务器群
+   
+       upstream badunodes {
+            server 127.0.0.1:8080;
+       }
+
+       server {
+            listen       80;
+            server_name www.baidu.com;
+
+            location / {
+                proxy_pass http://baidunodes;
+                proxy_set_header Host $http_host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
