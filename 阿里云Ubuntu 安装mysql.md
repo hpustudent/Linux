@@ -24,3 +24,5 @@
           修改 bind-address:127.0.0.1-> bind-address:0.0.0.0
     
 7. service mysql restart即可
+
+8. 如果需要代理则需要安装 mysql-proxy,使用命令apt-get install mysql-proxy ,安装完成后使用mysql-proxy -V 测试安装是否成功,如果成功会显示版本号，
