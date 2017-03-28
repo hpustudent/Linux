@@ -15,6 +15,7 @@
 * 1.1 A append,添加规则
 * 1.2 I insert,插入规则
 * 1.3 D delete，删除规则
+* 1.4 P policy，所有规则
 
 2. 规则链
 * 2.1 INPUT链：处理进来的数据包
@@ -26,4 +27,8 @@
 #### -j 动作
 1. ACCEPT:接收数据包
 2. DROP：丢弃数据包
-3. REJECT：
+3. REJECT：丢掉但是回复信息
+4. LOG:记录到日志
+5. SNAT:源地址转换
+6. DNAT：目标地址转换
+7. REDIRECT:重定向
