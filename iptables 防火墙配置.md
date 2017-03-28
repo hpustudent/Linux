@@ -16,6 +16,7 @@
 * 1.2 I insert,插入规则
 * 1.3 D delete，删除规则
 * 1.4 P policy，所有规则
+* 1.5 R replace, 替换规则
 
 2. 规则链
 * 2.1 INPUT链：处理进来的数据包
