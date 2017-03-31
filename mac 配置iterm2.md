@@ -14,8 +14,6 @@
    Solarized Dark.itermcolors和Solarized Light.itermcolors,导入配色方案到iterm2
    * 5.2 选择preferences -> profiles ->colors -> load presets 选择安装的配色主题
 ### 6. 使用agnoster主题
-    * 6.1 下载`https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor` ,执行install文件，会自动安装到`.oh-my-zsh/themes`目录下
-    * 6.2 `vim ~/.zshrc`编辑zshrc文件，将ZSH_THEME=的主题修改为agnoster
-   
-   
-   
+   * 6.1 下载`https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor` ,执行install文件，会自动安装到`.oh-my-zsh/themes`目录下
+   * 6.2 `vim ~/.zshrc`编辑zshrc文件，将ZSH_THEME=的主题修改为agnoster
+### 7. 使用chsh -s /bin/zsh 即可 切换为zsh操作 
