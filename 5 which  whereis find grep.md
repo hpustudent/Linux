@@ -6,11 +6,11 @@ find 某个目录 -iname 不区分大小写查找
 find 某个目录 -size [+-=]文件大小  
 find 某个目录 -user tempuser  
             
-find 某个目录 ***** [+-=]时间范围  (+表示之外，-表示之内)
--amin 访问时间 access  -atime 单位为天
--cmin 属性被修改 change  -ctime 单位为天
--mmin 内容被修改 modify -mtime 单位为天
-如 find /root -mmin -120 查找两小时内被修改过的文件     
+find 某个目录 ***** [+-=]时间范围  (+表示之外，-表示之内)  
+-amin 访问时间 access  -atime 单位为天  
+-cmin 属性被修改 change  -ctime 单位为天  
+-mmin 内容被修改 modify -mtime 单位为天  
+如 find /root -mmin -120 查找两小时内被修改过的文件       
                         
 find 查找连接选项 -a (and) -o(or)  
 find 根据文件类型查找 -type f(文件) d(目录) l(软连接)  
