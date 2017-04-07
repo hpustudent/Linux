@@ -63,7 +63,7 @@
 
 6. 允许外部ping
         
-        iptables -A INPUT -p icmp -j ACCEPT
+        iptables -A INPUT -p icmp --icmp-type 8 -j ACCEPT
         
 7. 允许已经建立的连接
 
