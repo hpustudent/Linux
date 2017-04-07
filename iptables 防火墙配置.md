@@ -67,7 +67,7 @@
         
 7. 允许已经建立的连接
 
-        iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+        iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
         
 8. 其他的都屏蔽掉
 
