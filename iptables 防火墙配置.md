@@ -1,4 +1,4 @@
-### 查看当前规则 iptables --list (或者-L),显示出三条链的所有规则，iptables -L -n --line-number,信使所有规则和行号
+### 查看当前规则 iptables --list (或者-L),显示出三条链的所有规则，iptables -L -n --line-number,显示所有规则和行号
 
 ### 清除已有的规则 iptables 
 
