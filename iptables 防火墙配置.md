@@ -38,5 +38,41 @@
 6. DNAT：目标地址转换
 7. REDIRECT:重定向
 
-### 常用写法
+### 常用配置
+1. 清空所有规则
 
+        iptables -F
+        
+2. 允许ssh端口从某个ip地址登录
+
+        iptables -A INPUT -p tcp -s 191.111.111.111 --dport 22 -j ACCEPT
+
+3. 允许本地回环地址
+
+        iptables -A INPUT -i lo -j ACCEPT
+        iptables -A OUTPUT -o lo -j ACCEPT
+      
+4. 配置白名单
+
+        iptables -A INPUT -p all -s 192.168.1.0/24 -j ACCEPT
+        iptables -A INPUT -p tcp -s 122.111.111.111 --dport 3380 -j ACCEPT
+       
+5. 开启80端口
+
+        iptables -A INPUT -p tcp --dport 80 -j ACCEPT 
+
+6. 允许外部ping
+        
+        iptables -A INPUT -p icmp -j ACCEPT
+        
+7. 允许已经建立的连接
+
+        iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+        
+8. 其他的都屏蔽掉
+
+        iptables -P INPUT DROP
+        iptables -P FORWARD DROP
+        iptables -P OUTPUT ACCEPT
+        
+9. iptables-save > /etc/sysconfig/iptables 或者使用 service iptables save 永久性保存规则
