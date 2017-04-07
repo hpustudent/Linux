@@ -2,7 +2,7 @@
 
 ### 清除已有的规则 iptables 
 1. iptables -F #清空所有防火墙规则
-2. iptables -X #删除用户自定义空链
+2. iptables -X #删除用户自定义规则
 3. iptables -Z #清空计数
 
 ### 命令选项书写规则
