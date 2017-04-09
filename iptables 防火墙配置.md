@@ -66,7 +66,7 @@
 
 6. 允许外部ping
         
-        iptables -A INPUT -p icmp --icmp-type 8 -j ACCEPT
+        iptables -A INPUT -p icmp  -j ACCEPT
         
 7. 允许已经建立的连接
 
@@ -80,3 +80,10 @@
         
 9. iptables-save > /etc/iptables.rules 将防火墙规则保存在文件中，修改/etc/network/interfaces脚本，在网卡0后边加上`pre-up iptables-restore < /etc/iptables.rules`和`post-down iptables-save > /etc/iptables.rules`
 
+        常用配置：
+        iptables -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+        iptables -A INPUT -p tcp -m tcp --dport 7001 -j ACCEPT
+        iptables -A INPUT -p tcp -m tcp --dport 3306 -j ACCEPT
+        iptables -A INPUT -p icmp -j ACCEPT
+        iptables -A INPUT -i lo -j ACCEPT
+        iptables -P INPUT DROP
