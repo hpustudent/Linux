@@ -75,4 +75,5 @@
         iptables -P FORWARD DROP
         iptables -P OUTPUT ACCEPT
         
-9. iptables-save > /etc/sysconfig/iptables 或者使用 service iptables save 永久性保存规则
+9. iptables-save > /etc/iptables.rules 将防火墙规则保存在文件中，修改/etc/network/interfaces脚本，在网卡0后边加上`pre-up iptables-restore < /etc/iptables.rules`和`post-down iptables-save > /etc/iptables.rules`
+
