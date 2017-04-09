@@ -27,6 +27,9 @@
 * 2.2 OUTPUT链：处理出去的数据包
 * 2.3 PORWARD链：处理转发的数据包
 
+      修改某条链的规则：iptables -R INPUT 4 -p icmp -j ACCEPT
+      在某个序号上添加规则：iptables -I INPUT 3 -p tcp --dport 22 -j ACCEPT
+
 #### 协议名，tcp udp icmp
 
 #### -j 动作
