@@ -37,6 +37,15 @@
 2. 来源目的地址[-s -d]
 3. 协议类型[-p]
 4. 来源目的端口[--dport --sport]
+5. 按照包状态匹配 [-m state --state]
+* 状态有： NEW RELATED ESTABLISHED INVALID四种
+* `iptables - A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT`
+6. 按照包速率匹配 [-m limit --limit]
+* `iptables -A FORWARD -p tcp --dport 80 -m limit --limit 50/s -j ACCEPT` 
+7. 多端口匹配 [-m multiport <--sports|--dports|--ports>],必须与`-p`一块使用
+* `iptables - A INPUT -p tcp -m multiport --dports 21,22,80 -j ACCEPT`
+8. 按来源mac地址匹配 [-m mac --mac-source]
+* `iptables -A FORWARD -m mac --mac-source xx:xx:xx:xx:xx:xx -j ACCEPT`
 
 
 #### -j 动作
