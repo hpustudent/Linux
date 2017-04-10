@@ -81,10 +81,11 @@
 9. iptables-save > /etc/iptables.rules 将防火墙规则保存在文件中，修改/etc/network/interfaces脚本，在网卡0后边加上`pre-up iptables-restore < /etc/iptables.rules`和`post-down iptables-save > /etc/iptables.rules`
 
         常用配置：
-        iptables -I INPUT 1 -p all -m state --state RELATED,ESTABLISHED -j ACCEPT
-        iptables -A INPUT -p tcp  tcp --dport 22 -j ACCEPT
-        iptables -A INPUT -p tcp  tcp --dport 7001 -j ACCEPT
-        iptables -A INPUT -p tcp  tcp --dport 3306 -j ACCEPT
-        iptables -A INPUT -p icmp -j ACCEPT
-        iptables -A INPUT -i lo -j ACCEPT
-        iptables -P INPUT DROP
+        iptables -A INPUT -i lo -j ACCEPT   #允许本地回环地址
+        iptables -A INPUT -p all -m state --state RELATED,ESTABLISHED -j ACCEPT #允许已经建立的连接通过
+        iptables -A INPUT -p tcp -m state --state NEW --dport 22 -j ACCEPT #开放本机22端口
+        iptables -A INPUT -p tcp -m state --state NEW --dport 7001 -j ACCEPT  #开放7001端口
+        iptables -A INPUT -p tcp -m state --state NEW --dport 3306 -j ACCEPT  #开放 3306 端口
+        iptables -A INPUT -p icmp -j ACCEPT  #允许外部ping
+        iptables -P INPUT DROP #默认策略为丢弃
+        
