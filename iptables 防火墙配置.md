@@ -9,6 +9,8 @@
       iptables -t 表名 <-A/I/D/R> 规则链名 [规则号] <-i/o 网卡名> -p 协议名 <-s 源IP/源子网> 
       --sport 源端口 <-d 目标IP/目标子网> --dport 目标端口 -j 动作
 
+      iptables [-t 要操作的表] <A/D/R/I/P/F操作的命令：增删改插策略清> [要操作的链] [规则号码] [匹配条件] [-j 匹配到以后的动作]
+
 #### 常用表名：filter net
 1. filter: 包过滤规则，用于防火墙规则
 2. net:地址转换，用于网关路由器
@@ -30,7 +32,12 @@
       修改某条链的规则：iptables -R INPUT 4 -p icmp -j ACCEPT
       在某个序号上添加规则：iptables -I INPUT 3 -p tcp --dport 22 -j ACCEPT
 
-#### 协议名，tcp udp icmp
+#### 匹配条件
+1. 流入流出接口[-i -o]
+2. 来源目的地址[-s -d]
+3. 协议类型[-p]
+4. 来源目的端口[--dport --sport]
+
 
 #### -j 动作
 1. ACCEPT:接收数据包
