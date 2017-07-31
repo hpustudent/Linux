@@ -26,5 +26,7 @@ IdentityFile 私钥位置
 
 ok可以登录了  
 
+使用gitlab免密钥提交代码的时候，需要使用ssh-add -K privateKey将私钥添加到Mac的钥匙串中
+
 ## 利用ssh-copy-id 命令
 
