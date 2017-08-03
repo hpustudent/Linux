@@ -27,3 +27,5 @@ firewall-cmd  --add-rich-rule="rule family="ipv4" source address="192.168.1.10" 
 
 ### 允许指定ip访问端口
 firewall-cmd  --add-rich-rule="rule family="ipv4" source address="192.168.1.10" port="5432" port protocol="tcp" accept" --permanent
+### 查询默认zone的rich rule
+firewall-cmd --list-rich-rules
