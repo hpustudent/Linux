@@ -29,3 +29,22 @@ firewall-cmd  --add-rich-rule='rule family=ipv4 source address=192.168.1.10 serv
 firewall-cmd  --add-rich-rule='rule family=ipv4 source address=192.168.1.10 port port=5432 protocol=tcp accept" --permanent
 ### 查询默认zone的rich rule
 firewall-cmd --list-rich-rules
+
+### 获取活动的区域 将输出每个zone和对应的网卡
+firewall-cmd --get-active-zones
+ 
+### 根据网卡名获取zone
+firewall-cmd --get-zone-of-interface=<interface>
+
+### 将网卡添加到zone
+ firewall-cmd [--zone=<zone>] --add-interface=<interface>
+ 
+### 修改网卡所属zone
+ firewall-cmd [--zone=<zone>] --change-interface=<interface>
+
+### 从区域中删除网卡
+firewall-cmd [--zone=<zone>] --remove-interface=<interface>
+
+### 列举zone中启用的服务
+ firewall-cmd [ --zone=<zone> ] --list-services
+ 
