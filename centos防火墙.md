@@ -56,12 +56,12 @@ firewall-cmd [--zone=<zone>] --remove-interface=<interface>
  firewall-cmd [ --zone=<zone> ] --list-services
  
  ### 端口转发
- firewall-cmd --permanent --zone=<区域> --add-forward-port=port=<源端口号>:proto=<协议>:toport=<目标端口号>:toaddr=<目标IP地址>
- firewall-cmd --add-forward-port=port=80:proto=tcp:toport=8080  将80端口的请求转发到8080端口 
- firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=192.168.1.0.1 将80端口请求转发到目的地址的80端口
+ firewall-cmd --permanent --zone=<区域> --add-forward-port=port=<源端口号>:proto=<协议>:toport=<目标端口号>:toaddr=<目标IP地址>  
+ firewall-cmd --add-forward-port=port=80:proto=tcp:toport=8080  将80端口的请求转发到8080端口   
+ firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=192.168.1.0.1 将80端口请求转发到目的地址的80端口  
  
  ### 伪装ip
-firewall-cmd --query-masquerade # 检查是否允许伪装IP
-firewall-cmd --add-masquerade   # 允许防火墙伪装IP
-firewall-cmd --remove-masquerade# 禁止防火墙伪装IP
+firewall-cmd --query-masquerade # 检查是否允许伪装IP  
+firewall-cmd --add-masquerade   # 允许防火墙伪装IP  
+firewall-cmd --remove-masquerade# 禁止防火墙伪装IP  
  
