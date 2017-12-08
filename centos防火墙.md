@@ -2,6 +2,7 @@
 ### systemctl enable firewalld        # 开机启动
 ### systemctl stop firewalld          # 关闭
 ### systemctl disable firewalld       # 取消开机启动
+### systemctl unmask firewalld  # unmask
 
 
 ### 查询端口开放情况
