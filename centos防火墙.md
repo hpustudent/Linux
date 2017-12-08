@@ -1,3 +1,9 @@
+### systemctl start firewalld         # 启动,
+### systemctl enable firewalld        # 开机启动
+### systemctl stop firewalld          # 关闭
+### systemctl disable firewalld       # 取消开机启动
+
+
 ### 查询端口开放情况
 firewall-cmd --zone=public --query-port=80/tcp
 ### 永久开启端口
