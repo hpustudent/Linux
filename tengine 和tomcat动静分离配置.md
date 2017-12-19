@@ -13,3 +13,12 @@
                 <Context path="/" docBase="/usr/local/tomcat/webapps/articleserver" reloadable="true"/>
               </Host>
             </Engine>
+
+2. 在Host标签中，配置日志文件格式
+
+        <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+            prefix="localhost_access_log" suffix=".txt" pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+          <Valve className="org.apache.catalina.valves.RemoteIpValve" remoteIpHeader="X-Forwarded-For"
+            protocolHeader="X-Forwarded-Proto" protocolHeaderHttpsValue="https"/>
+            
+ 3. 最终格式为  `<Host> <context /> <value/> <value></Host>`
