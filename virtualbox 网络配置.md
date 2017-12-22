@@ -17,4 +17,16 @@
 3. `ip ad`命令，即将看到新的网卡配置信息，此时ping宿主主机ip可以ping通了，通过宿主主机ping虚拟机ip也可以联通了
 
 ### 配置静态ip
-1. 在`/etc/sysconfig/network-scripts`
+1. 使用命令`nmcli dev status` 查看，当前使用network manager工具托管的网络有哪些，如果要使当前网卡接口使用静态ip，必须脱离network manager工具控制
+2. 在`/etc/sysconfig/network-scripts`，找到要设置静态ip的配置文件
+3. 修改如下地方
+
+        BOOTPROTO=static
+        IPADDR=192.168.56.110
+        NETMASK=255.255.255.0
+        NM_CONTROLLED=no
+        ONBOOOT=yes
+        NAME=填写使用ip ad命令显示出来的网卡设备名
+        DEVICE=填写使用ip ad命令显示出来的网卡设备名(必须)
+ 
+ 4. 使用`nmcli dev status`命令查看静态ip的网卡是否已经不被network manager工具控制，使用`ip ad`命令查看设置的ip是否生效
