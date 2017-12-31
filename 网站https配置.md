@@ -10,3 +10,10 @@
 ### `service nginx force-reload`重启nginx，使用nginx reload是无效的
 
 ### 修改nginx 配置
+
+    listen              443 ssl;
+    server_name         example.com;
+    #证书文件
+    ssl_certificate     example.com.crt;
+    #私钥文件
+    ssl_certificate_key example.com.key;
