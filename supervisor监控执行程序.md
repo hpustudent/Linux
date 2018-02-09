@@ -66,3 +66,12 @@
         `environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8`
  
 
+### centos 7 安装supervisor
+
+    yum install epel-release
+    yum install -y supervisor 
+    `sudo supervisord -c /etc/supervisor/supervisord.conf`  (以下两行解决 No such file or directory: file: /usr/lib/python2.7/socket.py) 
+    `sudo supervisorctl -c /etc/supervisor/supervisord.conf`  
+
+
+
