@@ -14,7 +14,7 @@
     + 将db/mmonit-schema.mysql中的sql在mysql创建的数据库中执行，创建相关表  
     + 在conf/server.xml中修改服务器配置，修改  
     
-    <Realm url="mysql://username:password@127.0.0.1/mmonit"  minConnections="1" maxConnections="25" reapConnections="1000" />
+           <Realm url="mysql://username:password@127.0.0.1/mmonit"  minConnections="1" maxConnections="25" reapConnections="1000" />
 
 #### ubuntu 安装monit
 1. `apt-get install monit`
