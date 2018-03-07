@@ -20,6 +20,7 @@
     + 启动服务器 `bin/mmonit start` 
     + 还原系统日期 `ntpdate  3.centos.pool.ntp.org` 
     + 加入开机启动 `echo “/usr/local/mmonit/bin/mmonit start”>>/etc/rc.d/rc.local` 
+    + 默认用户admin 默认密码swordfish
     
 #### ubuntu 安装monit
 1. `apt-get install monit`
