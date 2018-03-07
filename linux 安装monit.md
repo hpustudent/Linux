@@ -16,5 +16,10 @@
     
            <Realm url="mysql://username:password@127.0.0.1/mmonit"  minConnections="1" maxConnections="25" reapConnections="1000" />
 
+    + 变更系统日期 `date 060610002011` 
+    + 启动服务器 `bin/mmonit start` 
+    + 还原系统日期 `ntpdate  3.centos.pool.ntp.org` 
+    + 加入开机启动 `echo “/usr/local/mmonit/bin/mmonit start”>>/etc/rc.d/rc.local` 
+    
 #### ubuntu 安装monit
 1. `apt-get install monit`
