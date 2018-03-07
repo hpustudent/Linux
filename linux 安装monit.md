@@ -1,5 +1,5 @@
 #### centos 安装monit
-1. `yum install monit`
+1. `yum install epel-release`   `yum install monit`
 2. 编辑配置文件`/etc/monitrc` 修改配置
 3. 常用命令
     
