@@ -22,6 +22,8 @@
     + 加入开机启动 `echo "/usr/local/mmonit/bin/mmonit start">>/etc/rc.d/rc.local` 
     + 默认用户admin 默认密码swordfish  
     + 在monit客户端启用`set mmonit http://monit:monit@192.168.1.10:8080/collector`即可
-    
+
+5.monit 配置邮件提醒
+
 #### ubuntu 安装monit
 1. `apt-get install monit`
