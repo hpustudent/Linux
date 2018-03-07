@@ -25,5 +25,20 @@
 
 5.monit 配置邮件提醒
 
+    set mailserver smtp.qq.com port 465 username xxxx@qq.com password xxxxxxxxxx 
+    set mail-format {
+       from:    xxxxxxx@qq.com
+       subject: monit alert --  $EVENT $SERVICE
+       message: $EVENT Service $SERVICE
+                     Date:        $DATE
+                     Action:      $ACTION
+                     Host:        $HOST
+                     Description: $DESCRIPTION
+
+                Your faithful employee,
+                Monit
+    }
+    set alert xxxxxxx@qq.com
+
 #### ubuntu 安装monit
 1. `apt-get install monit`
