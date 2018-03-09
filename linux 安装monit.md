@@ -1,6 +1,6 @@
 #### centos 安装monit
 1. `yum install epel-release`   `yum install monit`
-2. 编辑配置文件`/etc/monitrc` 修改配置
+2. 编辑配置文件`/etc/monitrc` 修改配置,`systemctl enable monit`设置开机启动
 3. 常用命令
     
    + `monit -t`测试配置文件是否正确  
