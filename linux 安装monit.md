@@ -25,7 +25,7 @@
 
 5.monit 配置邮件提醒
 
-    set mailserver smtp.qq.com port 465 username xxxx@qq.com password xxxxxxxxxx 
+    set mailserver smtp.qq.com port 465 username xxxx@qq.com password xxxxxxxxxx using tlsv1  
     set mail-format {
        from:    xxxxxxx@qq.com
        subject: monit alert --  $EVENT $SERVICE
