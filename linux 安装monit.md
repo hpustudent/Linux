@@ -28,7 +28,7 @@
     set mailserver smtp.qq.com port 465 username xxxx@qq.com password xxxxxxxxxx using tlsv1  
     set mail-format {
        from:    xxxxxxx@qq.com
-       subject: monit alert -- 服务器名称-- $EVENT --> $DESCRIPTION
+       subject: monit alert -- 服务器名称-- $EVENT --> $DESCRIPTION
        message: $EVENT Service $SERVICE
                      Date:        $DATE
                      Action:      $ACTION
