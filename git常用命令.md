@@ -22,3 +22,7 @@ git init
 git remote add rep http://root:123456@192.168.1.1/user/first.git  
 git fetch rep dev:dev  
 git checkout dev -- bin  
+
+
+## 查看当前分支
+git branch
