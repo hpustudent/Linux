@@ -8,4 +8,6 @@
 
 解决：
 1. 引起这种问题的原因是设置Host虚拟主机目录和Context的docBase目录重复，造成加载了两次。
-2. 在/data目录下建立webapp目录，将war包放在这个文件夹下边,设置docBase为/data/webapp/目录名
+2. 在/data目录下建立webapp目录，将war包放在这个文件夹下边, 执行unzip 包名.war -d 文件夹名，设置docBase为/data/webapp/文件夹名
+
+换了文件夹，就会发现不会再加载两次了
