@@ -26,3 +26,6 @@ git checkout dev -- bin
 
 ## 查看当前分支
 git branch
+
+## 检出指定版本（使用指定版本的hash值替代即可）
+git checkout 6609522fccdcac12ee86cfe3d3fd09226f1708fd -- bin/dev/
