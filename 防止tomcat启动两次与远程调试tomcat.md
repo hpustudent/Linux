@@ -6,8 +6,12 @@
 ## 防止tomcat启动两次
 缘由：写了一个listener监听容器启动，发现调了两次contextInitialized，导致里边的行为执行了两次而出错
 
-解决：
+解决一：
 1. 引起这种问题的原因是设置Host虚拟主机目录和Context的docBase目录重复，造成加载了两次。
 2. 在/data目录下建立webapp目录，将war包放在这个文件夹下边, 执行unzip 包名.war -d 文件夹名，设置docBase为/data/webapp/文件夹名
+
+解决二：
+tomcat启动时，由于设置了Host的autoDeploy=true，就会导致启动两次，可以将autoDeploy设置为false，就避免了加载两次出现
+
 
 换了文件夹，就会发现不会再加载两次了
