@@ -9,7 +9,7 @@
                 <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
                        resourceName="UserDatabase"/>
               </Realm>
-              <Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true">
+              <Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="false">
                 <Context path="/" docBase="/usr/local/tomcat/webapps/articleserver" reloadable="true"/>
               </Host>
             </Engine>
