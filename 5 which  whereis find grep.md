@@ -30,3 +30,8 @@ grep -i 关键字匹配正则 文件名 可以不区分大小写
 grep -v 关键字匹配正则 文件名 排除包含 v表示反向搜索  
 例如：grep -i ABC 1.txt 查找在1.txt中包含ABC切不区分大小写  
 grep -v ^# 1.txt 排除在1.txt中以#开头的内容  
+
+5、ripgrep 安装方法：  
+yum -y install yum-utils  
+yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo  
+yum -y install ripgrep  
