@@ -11,4 +11,4 @@
 6、执行`docker run hello-world`启动hello-world 测试安装是否成功 `docker version 或者docker info获取docker安装信息`
 
 #### 使用一键安装脚本
-1、`curl -sSL https://get.daocloud.io/docker | sh`     使用文档 https://get.daocloud.io/
+1、`curl -sSL https://get.daocloud.io/docker | sh`     [使用文档](https://get.daocloud.io/)
