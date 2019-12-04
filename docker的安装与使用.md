@@ -11,7 +11,15 @@
 6、执行`docker run hello-world`启动hello-world 测试安装是否成功 `docker version 或者docker info获取docker安装信息`
 
 #### 使用一键安装脚本
-1、`curl -sSL https://get.daocloud.io/docker | sh`     [使用文档](https://get.daocloud.io/)
+1、`curl -sSL https://get.daocloud.io/docker | sh`     [使用文档](https://get.daocloud.io/)  
+
+2、docker国内镜像，使用`vim /etc/docker/daemon.json`,输入以下内容，并重启docker服务`systemctl restart docker`生效   
+
+        {
+            "registry-mirrors": [
+                "https://registry.docker-cn.com"
+            ]
+        }
 
 #### image
 1、docker把应用程序以及依赖添加到image文件中，通过image文件生成容器，同一个image文件，可以生成多个同时运行的容器实例
