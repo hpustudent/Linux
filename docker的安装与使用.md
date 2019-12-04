@@ -16,11 +16,11 @@
 2、docker国内镜像，使用`vim /etc/docker/daemon.json`,输入以下内容，并重启docker服务`systemctl restart docker`生效,通过info也可以
 查看到当前的源是否生效  
 
-        {
-            "registry-mirrors": [
-                "https://registry.docker-cn.com"
-            ]
-        }
+    {
+        "registry-mirrors": [
+            "https://registry.docker-cn.com"
+        ]
+    }
 
 #### image
 1、docker把应用程序以及依赖添加到image文件中，通过image文件生成容器，同一个image文件，可以生成多个同时运行的容器实例
