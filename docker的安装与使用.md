@@ -22,6 +22,8 @@
         ]
     }
 
+3、如果要使用阿里云镜像源可以[阿里云docker](https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors)  
+
 #### image
 1、docker把应用程序以及依赖添加到image文件中，通过image文件生成容器，同一个image文件，可以生成多个同时运行的容器实例
 
