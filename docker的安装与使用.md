@@ -13,7 +13,8 @@
 #### 使用一键安装脚本
 1、`curl -sSL https://get.daocloud.io/docker | sh`     [使用文档](https://get.daocloud.io/)  
 
-2、docker国内镜像，使用`vim /etc/docker/daemon.json`,输入以下内容，并重启docker服务`systemctl restart docker`生效   
+2、docker国内镜像，使用`vim /etc/docker/daemon.json`,输入以下内容，并重启docker服务`systemctl restart docker`生效,通过info也可以
+查看到当前的源是否生效  
 
         {
             "registry-mirrors": [
