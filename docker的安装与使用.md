@@ -27,7 +27,7 @@
 #### image
 1、docker把应用程序以及依赖添加到image文件中，通过image文件生成容器，同一个image文件，可以生成多个同时运行的容器实例
 
-2、使用`docker image ls 或者docker image rm`查看或删除image文件  
+2、使用`docker image ls 或者docker image rm`查看或删除image文件,更推荐使用`docker images`    
 
 3、使用`docker image pull library/test`表示从仓库中获取library/test的image文件，library是组名，test是文件名，docker官方提供的image文件，
 都放在library中，可以不写默认的组名，简化为`docker image pull test`
