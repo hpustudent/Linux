@@ -38,8 +38,12 @@
 
 5、容器执行后，会自动终止，如果容器提供的是服务，则需要使用`docker container kill [containID]`手动终止容器  
 
-6、容器一旦生成就会同时存在image文件和容器文件，而且关闭容器不会删除容器文件，只是停掉容器运行而已`docker container ls --all` 列出本机所有容器  
+6、容器一旦生成就会同时存在image文件和容器文件，而且关闭容器不会删除容器文件，只是停掉容器运行而已`docker container ls -a`或者使用`doccker ps -a` 列出本机所有容器  
 
 7、使用`docker container rm [containerID]`删除掉本地容器文件  
 
 #### docker根据dockfile生成二进制image文件
+
+#### 在容器中执行操作
+1、使用`docker exec`命令可以让容器执行指定的命令  
+2、使用`docker exec -it nginx bash`命令可以以控制台形式进入到虚拟环境中进行交互操作（i:交互式，t：终端）,如果没有bash则使用sh  
