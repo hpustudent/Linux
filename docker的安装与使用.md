@@ -8,7 +8,9 @@
 
 5、执行`systemctl start docker`启动docker  
 
-6、执行`docker run hello-world`启动hello-world 测试安装是否成功 `docker version 或者docker info获取docker安装信息`(`docker run --name nginx -d nginx:1.12`给指定版本的程序指定名字并且直接运行程序，但是run起来的程序是在前台执行的，可以通过`-d或--detach`选项使程序启动后与控制台脱离，使程序进入后台运行 )
+6、执行`docker run hello-world`启动hello-world 测试安装是否成功 `docker version 或者docker info获取docker安装信息`
+
+(`docker run --name nginx -d nginx:1.12`给指定版本的程序指定名字并且直接运行程序，但是run起来的程序是在前台执行的，可以通过`-d或--detach`选项使程序启动后与控制台脱离，使程序进入后台运行 )
 
 #### 使用一键安装脚本
 1、`curl -sSL https://get.daocloud.io/docker | sh`     [使用文档](https://get.daocloud.io/)  
