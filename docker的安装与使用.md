@@ -77,3 +77,8 @@
     `docker rm -v nginx`在删除容器时，同时删除容器关联的数据卷  
     `docker volume prune -f`强制删除没有被引用的数据卷  
 4、使用`--volumes-from 容器名`可以使用其他容器的数据卷
+
+#### Dockerfile
+1、构成要么是注释行，要么是指令行  
+
+2、
