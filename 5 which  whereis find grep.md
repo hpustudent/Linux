@@ -37,3 +37,4 @@ yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorg
 yum -y install ripgrep  
 
 6、`du -h --max-depth=1` 查看文件夹大小  
+   `du -sh /usr/local/` 查看指定路径下占有空间，-s不详细列出子文件  
