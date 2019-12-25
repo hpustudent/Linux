@@ -21,6 +21,12 @@
      ]
     }
     
+登录harbor的client，需要添加不安全设置
+
+    "insecure-registries":[
+      "http://115.29.215.82:8000"
+     ]
+
 5、修改harbor配置文件harbor.yml  
 1）修改为`hostname`，修改为本机的外网ip    
 2）修改为`port`，修改为本机对外暴露的访问端口号    
