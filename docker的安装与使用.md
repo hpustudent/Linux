@@ -84,9 +84,24 @@
 
 2、常用指令  
 
-2.1 FROM, 通常不会从0搭建一个镜像，而是选择一个已经存在的镜像作为基础，可以通过FROM指令指定一个基础颈线，接下来的所有指令都是基于这个镜像所
+2.1 FROM, 通常不会从0搭建一个镜像，而是选择一个已经存在的镜像作为基础，可以通过FROM指令指定一个基础镜像，接下来的所有指令都是基于这个镜像所
 展开的。  
    如果选择一个基础镜像作为构建镜像的根本，那么Dockfile的第一条指令必须是FROM指令，没有基础，其他的无法开展  
    如果出现多个FROM，表示此刻构建要将指出镜像的内容合并到此刻构建的镜像内容中。  
 
-2.2 RUN, 用于向控制台发送命令的指令。RUN后边直接拼接上需要执行的命令，在构建时，Docker就会执行这些命令
+2.2 RUN, 用于向控制台发送命令的指令。RUN后边直接拼接上需要执行的命令，在构建时，Docker就会执行这些命令  
+
+2.3 ENTRYPOINT 和CMD,容器启动执行的命令，两个同时出现时，会把CMD内容作为ENTRYPOINT的参数，最终执行容器启动的还是ENTRYPOINT命令。  
+
+    CMD ["executable","param1","param2"] (exec form, this is the preferred form)
+    CMD ["param1","param2"] (as default parameters to ENTRYPOINT)
+    CMD command param1 param2 (shell form)
+
+
+    ENTRYPOINT ["executable", "param1", "param2"] (exec form, preferred)
+    ENTRYPOINT command param1 param2 (shell form)  
+
+如果`docker run *** param1 param2`run后边有参数，则作为参数传入ENTRYPOINT参数，如果没参数，则把CMD全部内容做为参数。  
+总结：一般使用ENTRYPOINT 中括号形式作为docker容器启动以后的执行命令，可变部分比如参数可以使用CMD提供默认版本，如果想执行时指定参数，则在run后边加上自己的参数即可。  
+
+2.4
