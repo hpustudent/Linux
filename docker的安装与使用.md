@@ -44,6 +44,7 @@
 
 7、使用`docker container rm [containerID]`删除掉本地容器文件  
 
+
 #### docker根据dockfile生成二进制image文件
 
 #### 在容器中执行操作
@@ -61,6 +62,8 @@
 例子：`docker run -d --name nginx -p 8000:80 axizdkr/tengine:2.2.3 `
 
 5、使用`--net host`直接使用宿主机网络，但是不能将多个容器同时制定绑定宿主机网络  
+
+6、使用`--net=container:容器名`，将当前容器网络加入指定容器网络中  
 
 #### 文件数据交换
 1、使用选项`-v`或者`--volume`,例如`-v /usr/local/nginx.conf:/etc/nginx.conf`指定本地宿主机的配置文件或文件夹挂载到容器中的文件或文件夹下
