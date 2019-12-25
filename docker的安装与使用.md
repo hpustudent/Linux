@@ -131,4 +131,8 @@
     curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
     
+1、启动停止`docker-compose up -d`后台启动，使用`docker-compose down`停止并删除容器，同时删除网络配置  
+2、`docker-compose logs nginx` 查看docker-compose 中定义的nginx服务的日志  
+
+#### docker-compose 配置项
 
