@@ -73,5 +73,8 @@
     `sudo supervisord -c /etc/supervisord.conf`  (以下两行解决 No such file or directory: file: /usr/lib/python2.7/socket.py) 
     `sudo supervisorctl -c /etc/supervisord.conf`  
 
+### 监控前台运行
 
+        [supervisord]
+        nodaemon=false
 
