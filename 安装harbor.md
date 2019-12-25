@@ -17,7 +17,7 @@
 
     {                                                                                                          
      "registry-mirrors":[
-      "https://v48fhlzr.mirror.aliyuncs.com"
+      "https://*********.mirror.aliyuncs.com"
      ]
     }
     
