@@ -119,3 +119,10 @@
 #### 构建镜像 
 
 `docker build -t nginx:latest -f ./nginx/Dockerfile ./nginx` `-t`选项指定镜像名字和版本号，`-f`选项指定Dockerfile路径，后边是镜像文件夹
+
+#### docker-compose 
+
+    curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+    chmod +x /usr/local/bin/docker-compose
+    
+
