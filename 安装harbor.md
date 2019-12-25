@@ -24,7 +24,7 @@
 登录harbor的client，需要添加不安全设置
 
     "insecure-registries":[
-      "http://115.29.215.82:8000"
+      "http://192.168.1.1:8000"
      ]
 
 5、修改harbor配置文件harbor.yml  
