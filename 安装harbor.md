@@ -13,7 +13,7 @@
     curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
 
-4、修改docker镜像影像`vim /etc/docker/daemon.json`
+4、修改docker镜像影像`vim /etc/docker/daemon.json`,修改后需要重启docker `systemctl daemon-reload systemctl restart docker`
 
     {                                                                                                          
      "registry-mirrors":[
