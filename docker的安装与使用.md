@@ -104,4 +104,18 @@
 如果`docker run *** param1 param2`run后边有参数，则作为参数传入ENTRYPOINT参数，如果没参数，则把CMD全部内容做为参数。  
 总结：一般使用ENTRYPOINT 中括号形式作为docker容器启动以后的执行命令，可变部分比如参数可以使用CMD提供默认版本，如果想执行时指定参数，则在run后边加上自己的参数即可。  
 
-2.4
+2.4 EXPOSE 可以为镜像指定要暴露的端口 
+
+2.5 VOLUME 创建数据卷，指定了这个就不需要在run指定`-v`了  
+
+2.6 COPY和AND 从宿主机系统拷贝文件到镜像中，COPY和AND命令格式完全一样，区别在于AND支持网络端文件，并且源文件为压缩包时会自动解压
+
+    COPY [--chown=<user>:<group>] <src>... <dest>
+    ADD [--chown=<user>:<group>] <src>... <dest>
+
+    COPY [--chown=<user>:<group>] ["<src>",... "<dest>"]
+    ADD [--chown=<user>:<group>] ["<src>",... "<dest>"]
+
+#### 构建镜像 
+
+`docker build -t nginx:latest -f ./nginx/Dockerfile ./nginx` `-t`选项指定镜像名字和版本号，`-f`选项指定Dockerfile路径，后边是镜像文件夹
