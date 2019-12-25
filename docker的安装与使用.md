@@ -81,6 +81,7 @@
 #### 其他常用命令
 1、`--restart=always` 在docker服务重启后，容器自动启动  
 2、使用`docker exec nginx env`查看指定容器的环境变量  
+3、使用`docker update --restart=always`对运行中的容器开启自动重启
 
 #### Dockerfile
 1、构成要么是注释行，要么是指令行  
