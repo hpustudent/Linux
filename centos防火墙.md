@@ -13,7 +13,7 @@ firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone=public --remove-port=80/tcp --permanent
 ### 查看开放端口
 firewall-cmd --zone=public --list-ports
-### 添加白名单
+### 添加白名单到publich区域，最好直接加入可信区域(`firewall-cmd --zone=trusted --add-source=1.2.3.4 --permanent`)
 firewall-cmd --zone=public --add-source=1.2.3.4 --permanent
 ### 查询白名单
 firewall-cmd --zone=public --list-sources
