@@ -8,6 +8,11 @@
 
 `yum -y install fail2ban-firewalld fail2ban-systemd`
 
+修改`jail.d/00-firewalld.conf`为
+
+        [DEFAULT]
+        banaction = firewallcmd-new
+
 5. 在`/etc/fail2ban/`目录下可以看到配置文件，再此目录下新建文件`jail.local`, systemctl 启动fail2ban
 
 
