@@ -1,6 +1,6 @@
 ### docker 安装
 ```
-docker run --name=glances -v `pwd`/glances.conf:/glances/conf/glances.conf -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host -it nicolargo/glances:latest-alpine
+docker run --name=glances -v `pwd`/glances.conf:/glances/conf/glances.conf -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host --network host -it nicolargo/glances:latest-alpine
 ```
 
 ### 普通安装
