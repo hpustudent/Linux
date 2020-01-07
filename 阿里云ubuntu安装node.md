@@ -2,6 +2,8 @@
 
 ```
 git clone https://github.com/cnpm/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+echo ". ~/.nvm/nvm.sh" >> /etc/profile
+source /etc/profile
 ```
 
 - 执行命令`wget -c https://nodejs.org/download/release/v4.6.0/node-v4.6.0-linux-x64.tar.gz` 断点续传下载node二进制包
