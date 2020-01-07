@@ -1,5 +1,8 @@
 ### docker 安装
+```
+docker run -v `pwd`/glances.conf:/glances/conf/glances.conf -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host -it nicolargo/glances
 
+```
 
 ### 普通安装
 
