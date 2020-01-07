@@ -1,6 +1,6 @@
 ### docker 安装
 ```
-docker run --name=glances -v `pwd`/glances.conf:/glances/conf/glances.conf -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host --network host -it -e GLANCES_OPT="--disable-plugin percpu,memswap,processcount,gpu,sensors,diskio --export restful -t 5 -q" vimagick/glances
+docker run --name=glances -v `pwd`/glances.conf:/glances/conf/glances.conf -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host --network host -e GLANCES_OPT="--disable-plugin percpu,memswap,processcount,gpu,sensors,diskio --export restful -t 5 -q" -d vimagick/glances
 ```
 
 ### 普通安装
