@@ -1,4 +1,7 @@
 - 使用nvm安装和管理node `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`装完之后刷新环境变量`source /root/.bashrc`  
+
+-git clone https://github.com/cnpm/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+
 - 执行命令`wget -c https://nodejs.org/download/release/v4.6.0/node-v4.6.0-linux-x64.tar.gz` 断点续传下载node二进制包
 - 执行命令 `tar -zxvf 包名` 解压
 - 进入解压包 执行 `./bin/node -v` 和 `./bin/npm -v`都正常显示版本信息就安装成功
