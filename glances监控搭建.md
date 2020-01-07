@@ -1,3 +1,8 @@
+### docker 安装
+
+
+### 普通安装
+
 1、初始化环境`curl -L https://bit.ly/glances | /bin/bash`  
 
 遇到错误可以使用  
