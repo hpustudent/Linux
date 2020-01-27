@@ -16,10 +16,14 @@ chmod +x hooks/post-receive
 GIT_REPO=/root/.gitrepos/repo1.git
 PUBLIC_WWW=/data/book/repo1
 
+rm -rf $PUBLIC_WWW  #清除老文件夹
 git clone $GIT_REPO $PUBLIC_WWW
-rm -Rf $PUBLIC_WWW/.git
+cd $PUBLIC_WWW
+gitbook build  >> /root/repo1.log #将执行日志存放到本地文件中
 exit
 ```
+
+注意：由于在git中执行命令的环境变量和系统环境变量不一样，需要执行`ln -s /root/.nvm/versions/node/v10.16.3/bin/* /usr/local/bin`下才可以保证gitbook命令和依赖的node命令正常执行
 
 3. 在本机配置远程仓库
 `git remote add deploy deployer@myserver.com:/root/.gitrepos/repo1.git`
