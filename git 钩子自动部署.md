@@ -17,6 +17,7 @@ GIT_REPO=/root/.gitrepos/repo1.git
 PUBLIC_WWW=/data/book/repo1
 
 git clone $GIT_REPO $PUBLIC_WWW
+rm -Rf $PUBLIC_WWW/.git
 exit
 ```
 
