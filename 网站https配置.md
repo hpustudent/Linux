@@ -1,7 +1,7 @@
 ### `curl  https://get.acme.sh | sh`
 ### `acme.sh  --issue  -d mydomain.com -d www.mydomain.com  --webroot  /home/wwwroot/mydomain.com/`
 
-### 对于nginx来说 (注意：如果路径不存在需要手动创建路径，命令才可以执行成功)使用命令 
+### 对于nginx来说 (注意：如果路径不存在需要手动创建路径，命令才可以执行成功)使用命令`mkdir -p /etc/nginx/ssl` 
 
     acme.sh --installcert -d mydomain.com
     --key-file /etc/nginx/ssl/mydomain.com.key 
