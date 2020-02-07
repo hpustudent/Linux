@@ -1,3 +1,7 @@
+### [使用arthas就行了](https://alibaba.github.io/arthas/docker.html)
+
+---
+
 ## java -XX:+PrintCommandLineFlags -version 查看jvm初始配置和版本信息, java -XX:+PrintFlagsFinal -version 查看jvm相关flags  
     例如使用java -XX:+PrintFlagsFinal -version |grep manageable查看jvm管理相关flag的接口，打印
     bool PrintGC                                   = false                               {manageable}
