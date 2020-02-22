@@ -1,6 +1,6 @@
 ### [使用arthas就行了](https://alibaba.github.io/arthas/docker.html)
 
-## java -XX:+PrintCommandLineFlags -version 查看jvm所用的垃圾回收器
+## java -XX:+PrintCommandLineFlags -version 查看jvm所用的垃圾回收器(win下)
 
 ---
 
