@@ -1,0 +1,11 @@
+1. 进入系统选择页面时，按下键盘 `e`
+
+2. 光标往下，找到`linux 16 /vmlinuz-3.10.el7.x86_64 root=/dev/mapper/centos-root **** LANG=zh_CN_UTF-8` 在后边添加 `init=/bin/sh`，输入后按下ctrl+x重启系统
+
+3. `mount` 查看系统挂载，修改系统为可读可写，`mount -o remount,rw /`
+
+4. `passwd`修改密码，重复输入两次密码
+
+5. `touch /.autorelabel`
+
+6. `exec /sbin/init`启动系统
