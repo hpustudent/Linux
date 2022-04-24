@@ -1,0 +1,3 @@
+1. 下载 `wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo`
+2. 清理yum缓存，`yum clean all`
+3. 清理后重新建立缓存，`yum makecache`
